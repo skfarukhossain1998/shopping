@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Profile</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    
+   <!-- Navbar -->
+   <nav>
+    <div class="brand">
+      <a>MeShop.</a>
+    </div>
+    <div class="nav-items">
+      <a href="/">Home</a>
+      <a href="" class="a_login">Login</a>
+      <!-- <a href="/" onclick="remove()">Logout</a> -->
+      <a href="">Signup</a>
+      <a href="../shop/index.html">Shop</a>
+      <a href="../cart/index.html">My Cart</a>
+      <!-- <a href="./profile/index.html">Profile</a> -->
+    </div>
+  </nav>
+
+
+<!-- Navbar End -->
+<div class="container">
+  <form class="profile">
+      <h1>My Profile</h1>
+      <div class="form_group">
+              <input type="text" class="fname" placeholder="First name">
+      </div>
+      <div class="form_group">
+          <input type="text" class="lname" placeholder="Last Name">
+      </div>
+
+      <button type="submit" style="background-color: black; color: white; cursor: pointer;" class="btn">Save Info</button>
+  </form>
+
+  <form class="editPass">
+    <h1>Edit Password</h1>
+      <div class="form_group">
+              <input type="password" class="oldPass" placeholder="Old Password">
+      </div>  
+      <div class="form_group">
+          <input type="password" class="newPass" placeholder="New Password">
+      </div>
+      <div class="form_group">
+        <input type="password" class="confPass" placeholder="Confirm Password">
+    </div>
+
+      <button type="submit" style="background-color: black; color: white;" id="change" class="btn">Change Password</button>
+      <button type="submit" style="background-color: black; color: white;" id="logout" class="btn">Logout</button>
+  </form>
+
+</div>
+
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
