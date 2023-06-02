@@ -112,10 +112,12 @@ input{
 } 
 
 .btn{
-    width: 10vw;
-    height: 5.5vh;
+ /*  display: flex;
+  flex-direction: row; */
+    width: 12vw;
+    height: 6vh;
     border: 2px solid black;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 20px;
 }

@@ -285,7 +285,7 @@ logout.addEventListener("click",loggingOff);
 function loggingOff(event)
 {
   event.preventDefault();
-  if (localStorage.getItem("user") === "[]") {
+  if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     alert("Please Login First")
     window.location.href="../shop/index.html"
     
@@ -303,7 +303,7 @@ myCart.addEventListener("click",cart_item);
 function cart_item(event)
 {
   event.preventDefault();
-  if (localStorage.getItem("user") === "[]") {
+  if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     alert("Please Login First")
     localStorage.setItem("cart", JSON.stringify([]))
     window.location.href="../shop/index.html"
@@ -319,7 +319,7 @@ const profile=document.getElementById("profile");
 profile.addEventListener("click",pro);
 function pro(event)
 {event.preventDefault();
-  if (localStorage.getItem("user") === "[]") {
+ if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     alert("Please Login First")
     window.location.href="../shop/index.html"
     
@@ -334,7 +334,7 @@ window.location.href="../profile/index.html";
 login_btn.addEventListener("click",login_check);
 function login_check()
 {
-  if (localStorage.getItem("user") === "[]") {
+ if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     alert("Please Login First")
     window.location.href="../login/login.html"
     
@@ -351,7 +351,7 @@ login_btn.addEventListener("click",log_check);
 function log_check(event) {
   event.preventDefault(); // Prevent default action
   
-  if (localStorage.getItem("user") === "[]") {
+  if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     window.location.href = "../login/login.html";
   } else {
 
@@ -365,7 +365,7 @@ signup.addEventListener("click",sign_check);
 function sign_check(event) {
   event.preventDefault(); // Prevent default action
   
-  if (localStorage.getItem("user") === "[]") {
+  if (localStorage.getItem("user") === "[]" || localStorage.getItem("user") === "{}") {
     window.location.href = "../signup/signup.html";
   } else {
     alert("You are already in your Account");
