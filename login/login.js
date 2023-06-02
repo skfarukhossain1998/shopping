@@ -18,14 +18,14 @@ if(name === "" || pass === "" ) {
     msg.style.color = "red";
 }
 else if(name != userName || pass != userPass){
-    msg.innerHTML = "Chack Your Username Or Password";
+    msg.innerHTML = "Check Your Username Or Password";
     msg.style.display = "block";
-    msg.style.color = "red";
+    msg.style.color = "Blue";
 }
 else{
-    msg.innerHTML = "Thanks";
+    msg.innerHTML = "Successfully Login";
     msg.style.display = "block";
-    msg.style.color = "red";
+    msg.style.color = "Green";
     setTimeout(() => {
         window.location.href = "../shop/index.html";
     }, 1000);

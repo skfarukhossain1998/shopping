@@ -24,10 +24,11 @@ document.getElementById("rzp-button1").onclick = function (e) {
   e.preventDefault();
 };
  */
-
+/* const pay=JSON.parse(localStorage("cart")); */
 document.getElementById("rzp-button1").onclick =function(e){
 alert("Your Payment Complete");
 window.location.href="../shop/index.html";
+localStorage.setItem("cart", JSON.stringify([]));
 
 
   e.preventDefault();

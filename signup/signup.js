@@ -27,7 +27,7 @@ if(user.fname === "" || user.fname === "" || user.email === "" || user.pass === 
 } else if(user.pass !== confpass) {
     msg.innerHTML = "Password and Confirm password not matched.";
     msg.style.display = "block";
-    msg.style.color = "red";
+    msg.style.color = "Blue";
     return;
 } else {
     msg.innerHTML = "Signup successful!";

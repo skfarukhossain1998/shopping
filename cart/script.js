@@ -15,7 +15,7 @@ user.totalPrice=totalPrice.toFixed(2)
 
 localStorage.setItem("user", JSON.stringify(user)) */
 
-document.getElementById("total-price").innerHTML = "$"+totalPrice;
+document.getElementById("total-price").innerHTML = "$"+totalPrice.toFixed(2);
 }
 calculateTotal()
 
@@ -88,15 +88,45 @@ function renderItems(item) {
   }
 
   //redirecting to the payments page---------------------------->
-  document.querySelector("#pay-btn").addEventListener("click",()=>{
-    if (localStorage.getItem("cart") == null) {
+  const payBtn=document.getElementById("pay-btn");
+  payBtn.addEventListener("click",check);
+  let cart=JSON.parse(localStorage.getItem("cart"));
+  function check()
+  {
+    /* if(localStorage.getItem("cart") === "[]") */
+    if (localStorage.getItem("cart") === "[]") {
         alert("Please Purchase Something")
         window.location.href="../shop/index.html"
         
     }
     else{
-    localStorage.setItem("cart", JSON.stringify([]))
     alert("The items were purchased")
     window.location.href="../razorpay/index.html"
     }
-  });
+    /* console.log("working");
+    if ((localStorage.getItem("cart"))!="[]") {
+
+      console.log("Item Exist");
+  
+  }
+  else{
+    console.log("Item Not exist");
+  } */
+    
+  };
+  /* For Logging Out and null the user */
+const logout=document.getElementById("logout");
+logout.addEventListener("click",loggingOff);
+function loggingOff()
+{
+  if (localStorage.getItem("user") === "[]") {
+    alert("Please Login First")
+    window.location.href="../shop/index.html"
+    
+}
+else{
+localStorage.setItem("user", JSON.stringify([]))
+alert("Logout Successfull")
+window.location.href="../index.html"
+}
+} 

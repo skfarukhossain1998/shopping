@@ -279,7 +279,98 @@ function renderItems(item) {
  </div>
 </div>`;
 }
+/* For Logging Out and null the user */
+const logout=document.getElementById("logout");
+logout.addEventListener("click",loggingOff);
+function loggingOff(event)
+{
+  event.preventDefault();
+  if (localStorage.getItem("user") === "[]") {
+    alert("Please Login First")
+    window.location.href="../shop/index.html"
+    
+}
+else{
+localStorage.setItem("user", JSON.stringify([]))
+alert("Logout Successfull")
+window.location.href="../index.html"
+}
+}
 
+/* For Cart and null the user */
+const myCart=document.getElementById("myCart");
+myCart.addEventListener("click",cart_item);
+function cart_item(event)
+{
+  event.preventDefault();
+  if (localStorage.getItem("user") === "[]") {
+    alert("Please Login First")
+    localStorage.setItem("cart", JSON.stringify([]))
+    window.location.href="../shop/index.html"
+    
+}
+else{
+window.location.href="../cart/index.html"
+}
+}
+
+/* For profile and null the user */
+const profile=document.getElementById("profile");
+profile.addEventListener("click",pro);
+function pro(event)
+{event.preventDefault();
+  if (localStorage.getItem("user") === "[]") {
+    alert("Please Login First")
+    window.location.href="../shop/index.html"
+    
+}
+else{
+window.location.href="../profile/index.html";
+}
+}
+
+/* If there is value then dont go to login and signup */
+/* const login_btn=document.querySelector('#login_id');
+login_btn.addEventListener("click",login_check);
+function login_check()
+{
+  if (localStorage.getItem("user") === "[]") {
+    alert("Please Login First")
+    window.location.href="../login/login.html"
+    
+}
+else{
+window.location.href="../profile/index.html";
+}
+}
+ */
+
+/* For login and null the user */
+const login_btn=document.getElementById("login_id");
+login_btn.addEventListener("click",log_check);
+function log_check(event) {
+  event.preventDefault(); // Prevent default action
+  
+  if (localStorage.getItem("user") === "[]") {
+    window.location.href = "../login/login.html";
+  } else {
+
+    alert("You are already in your Account");
+  }
+}
+/* For signup and null the user */
+
+const signup=document.getElementById("singUp");
+signup.addEventListener("click",sign_check);
+function sign_check(event) {
+  event.preventDefault(); // Prevent default action
+  
+  if (localStorage.getItem("user") === "[]") {
+    window.location.href = "../signup/signup.html";
+  } else {
+    alert("You are already in your Account");
+  }
+}
  
  
  
